@@ -98,7 +98,7 @@ Also know as **reviewing things**:
 * DevOps Review - environment/deployment
 * SRE Review - gauges
 
-Long Story Short - Make sure stuff alines with your company *vision* on how software is being made
+<span style="color:blue"> Make sure stuff alines with your company *vision* on how software is being made </span>
 
 ---
 # Software Architecture
@@ -124,11 +124,13 @@ Long Story Short - Make sure stuff alines with your company *vision* on how soft
 
 * It is how you model the business entities
 
-* It is the single most important element in the system design of a SaaS
+* **It is the single most important element in the system design of a SaaS**
 
 * It is the only effort worth investing BEFORE writing a single line of code (atypical for a startup to do)
 
 * Still, it is ever evolving with the business needs, but once in use, *it is hard to change*
+
+* <span style="color:blue"> Things that aren't persisted are potentially lost, so the use of in-memory data structures (with all due respect to BigO) is just temporary and the **significant stateful operations are done over a database** </span>
 
 ---
 # Data Model - Implementation
@@ -143,7 +145,7 @@ The founding father of the relational model is *Edgar F. Codd*
 * Based on his work published in 1970 (yes, 52 yo technology) while he was working for IBM
 * He won the Turing Award in 1981 for this work
 * He applied Relational Algebra and proposed such an algebra as a basis for database query languages
-* Five primitive operators: selection, projection, Cartesian product (also called the cross product or cross join), set union, set difference.
+* Five primitive operators: selection, projection, Cartesian product (also called cross join), set union, set difference.
 
 
 ![bg right:40% 80%](Edgar_F_Codd.jpeg)
@@ -161,12 +163,28 @@ The founding father of the relational model is *Edgar F. Codd*
 
 * Relational databases are transactional—they guarantee the state of the entire system is consistent at any moment
 
+* <span style="color:blue"> You'd rarely find a company using "raw" SQL queries as it is considered error prone </span>
+
+* <span style="color:blue">  Most likely a company would use an ORM framework of some sorts </span>
 ---
 
 # Relational Databases - Example
 
+## TODO ERD of Customers and Orders tables
 
+---
 
+# Relational Database - Transactions & 2PC
+
+The only model that is able to guarantee correctness of a system
+
+A query from my service over the data ALWAYS produces the same result as from another service
+
+The cost is database row/table locking and performance hit (which is nowadays negligible)
+
+This is key for a company that can't accept eventual consistency
+
+ACID
 
 ---
 # Literature
