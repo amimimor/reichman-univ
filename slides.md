@@ -113,6 +113,16 @@ Long Story Short - Make sure stuff alines with your company *vision* on how soft
 * Capture *Data*
 * Do something over *Data*
 * Arrange the *Data* nicely
+* Ask for money from customers/advertisers
+![bg right:40% 80%](whats.png)
+![bg right:40% 80%](insta.jpeg)
+---
+
+# The Data Model
+
+is the single most important element in the system design
+---
+
 ---
 # Literature
 
