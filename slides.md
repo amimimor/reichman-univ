@@ -154,20 +154,48 @@ The founding father of the relational model is *Edgar F. Codd*
 
 # Relational Databases - Basics
 
+* Relational databases are all about __tables__
+* Tables are able to _relate_ to one another
+![left:40% 80%](Positions-People-Relations-Opaque.png)
+
+---
+
+# Relational Databases - Basics 2
+
+
+* Use a __declarative__ language to apply operations over the logical representation and don't mind the physical aspects
+
+
+* Ability to create meaningful information by __joining__ of tables
+
+
+
+* To ensure that data is always accurate and accessible, relational databases follow certain integrity rules (__A.C.I.D__)
+
+* Relational databases are __transactional__—they guarantee the state of the entire system is consistent at any moment
+
 * The relational model means that the *logical data structures*—the data tables, views, and indexes—are separate from the *physical storage structures*
-* Use a declarative language to apply operations over the logical representation and don't mind the physical aspects
 
-* Ability to create meaningful information by joining of tables
 
-* To ensure that data is always accurate and accessible, relational databases follow certain integrity rules
 
-* Relational databases are transactional—they guarantee the state of the entire system is consistent at any moment
+// todo: move these two
 
 * <span style="color:blue"> You'd rarely find a company using "raw" SQL queries as it is considered error prone </span>
 
 * <span style="color:blue">  Most likely a company would use an ORM framework of some sorts </span>
 ---
 
+# Relational Databases - __Declarative__ __Language__
+
+---
+
+# Relational Databases - __JOINS__
+
+---
+
+# Relational Databases - __A.C.I.D__
+
+---
 # Relational Databases - Example
 
 ## TODO ERD of Customers and Orders tables
@@ -182,7 +210,7 @@ A query from my service over the data ALWAYS produces the same result as from an
 
 The cost is database row/table locking and performance hit (which is nowadays negligible)
 
-This is key for a company that can't accept eventual consistency
+This is key for a company that can't accept eventual consistency (regulatory) or that it's business flow is sequential
 
 ACID
 
