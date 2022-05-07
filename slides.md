@@ -42,10 +42,8 @@ a dot com
 # What We'll Talk About
 
 
-* *Software architecture*
-    * origin
-    * theory
-    * in practice 
+* Software architecture - theory
+* We theory meets reality
 * The oh-so-boring SaaS company
 * The *relational database* as the greatest invention in industrial software engineering
 * Where the relational database *fails*
@@ -108,6 +106,17 @@ Also know as **reviewing things**:
 * Read about: "evolutionary architecture" 
 ---
 
+# Ope There Goes Gravity (E. minem)
+
+* The ideal picture is a fantasy
+* Reality is that the only things you have to __surrender__ to accepting these truths:
+    * You and your work are __not__ __eternal__ 
+    * Even the "best" code is eventually __thrown__ to the recycle bean 
+    * You are working for a company that in its essence is a machine made to make __profit__
+    * The *individual skills*, at the broader picture, are __irrelevant__ 
+* None of the above is in contradiction to software development being a beautiful human mental act
+
+---
 # The Oh-So-Boring SaaS Company
 
 * Capture *Data*
