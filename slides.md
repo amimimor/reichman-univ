@@ -188,12 +188,6 @@ The founding father of the relational model is *Edgar F. Codd*
 * The relational model means that the *logical data structures*—the data tables, views, and indexes—are separate from the *physical storage structures*
 
 
-
-// todo: move these two
-
-* <span style="color:blue"> You'd rarely find a company using "raw" SQL queries as it is considered error prone </span>
-
-* <span style="color:blue">  Most likely a company would use an ORM framework of some sorts </span>
 ---
 
 # Relational Databases - __Declarative__ __Language__
@@ -210,6 +204,19 @@ The founding father of the relational model is *Edgar F. Codd*
 ![](postgres_join.png)
 ![](postgres_join_results.png)
 
+
+---
+
+# Relational Database - Transactions & 2PC
+
+Transactions are special SQL expressions that trigger a special treatment and providing the users with *guarantees* 
+
+A query from my service over the data ALWAYS produces the same result as from another service
+
+The cost is database row/table locking and performance hit (which is nowadays negligible)
+
+This is key for a company that can't accept eventual consistency (regulatory) or that it's business flow is sequential
+
 ---
 
 # Relational Databases - Transactions & __A.C.I.D__
@@ -223,23 +230,55 @@ __Isolation__ - a transaction cannot read data from any other transaction that h
 __Durability__ - once a transaction is committed, it will remain in the system – even if there’s a system crash immediately following the transaction
 
 ---
-# Relational Databases - Example
 
-## TODO ERD of Customers and Orders tables
+# Relational Databases - In Reality
+
+
+* You'd rarely find a company using "raw" SQL queries as it is considered error prone
+
+* Most likely a company would use an ORM framework of some sorts
+
+* ORM - Object (to) Relational Mapping
+
+* ORM - Libraries that abstract away the SQL expressions and allow to use a more programmatic access to data 
+
+* Python - Django, SQLAlchemy
+* Java - Hibernate
 
 ---
 
-# Relational Database - Transactions & 2PC
+# When the Relational Model Breaks
 
-The only model that is able to guarantee correctness of a system
+![h:400px w:600px](questions.png)
 
-A query from my service over the data ALWAYS produces the same result as from another service
+---
 
-The cost is database row/table locking and performance hit (which is nowadays negligible)
+# Graph Databases
 
-This is key for a company that can't accept eventual consistency (regulatory) or that it's business flow is sequential
+* Databases that uses __graph__ __structures__ to store data. The graph is build by nodes and edges (relationship).
+* Common query languages are: Cypher, Gremlin and SparQL.
+* Offers ACID transaction guarantees
+* Schema-less 
+* Excel at recursive, graph data structures
+![bg right:50% 80%](graph1.png)
+ 
+ ---
 
-ACID
+# Modeling Questions on a Graph Database
+
+![bg left:40%](graph2.png)
+
+---
+
+# Modeling a Respondent 
+
+![bg right:40% 80%](graph3.png)
+
+---
+
+# That's a Questionnaire
+
+![bg right:60%](graph4.png)
 
 ---
 # Literature
