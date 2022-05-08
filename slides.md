@@ -109,11 +109,12 @@ Also know as **reviewing things**:
 # Ope There Goes Gravity (E. minem)
 
 * The ideal picture is a fantasy
-* Reality is that the only things you have to __surrender__ to accepting these truths:
-    * You and your work are __not__ __eternal__ 
+* You have to __surrender__ to accepting these:
+    * You and your work are __not__ __eternal__
+    * There is no ״generic״ best architecture
     * Even the "best" code is eventually __thrown__ to the recycle bean 
     * You are working for a company that in its essence is a machine made to make __profit__
-    * The *individual skills*, at the broader picture, are __irrelevant__ 
+    * שׁt the broader picture, *individual skills*, are __irrelevant__. Collaboration is key
 * None of the above is in contradiction to software development being a beautiful human mental act
 
 ---
@@ -139,14 +140,16 @@ Also know as **reviewing things**:
 
 * Still, it is ever evolving with the business needs, but once in use, *it is hard to change*
 
-* <span style="color:blue"> Things that aren't persisted are potentially lost, so the use of in-memory data structures (with all due respect to BigO) is just temporary and the **significant stateful operations are done over a database** </span>
+* Things that aren't persisted are potentially lost, so the use of in-memory data structures (with all due respect to BigO) is just temporary and the **significant stateful operations are done over a database**
+
+
 
 ---
 # Data Model - Implementation
 Usually, we're talking about a *Relational Database* 
 
-### Popular RDBs
-* PostgreSQL, MySQL, Oracle, SQL Server
+![](dbs.png)
+
 ---
 # Relational Databases
 The founding father of the relational model is *Edgar F. Codd*
@@ -178,7 +181,6 @@ The founding father of the relational model is *Edgar F. Codd*
 * Ability to create meaningful information by __joining__ of tables
 
 
-
 * To ensure that data is always accurate and accessible, relational databases follow certain integrity rules (__A.C.I.D__)
 
 * Relational databases are __transactional__—they guarantee the state of the entire system is consistent at any moment
@@ -195,6 +197,8 @@ The founding father of the relational model is *Edgar F. Codd*
 ---
 
 # Relational Databases - __Declarative__ __Language__
+
+![40%](postgres_create_sql.png)
 
 ---
 
