@@ -13,21 +13,24 @@ _class: lead
 ---
 <!-- paginate: true -->
 
+# Contact Me
+
+amitm
+@
+at-bay.com
+
+### Feel free to drop me your comments, suggestions, questions
+
 ---
 
 # Nice to Meet You!
 
 * Life: 45 yo, married + 3 kids, live in Shoham, Yoga.
-* Work: 
-    * Current: 2 yrs @ [At-Bay](https://at-bay.com) as a Software Architect (...what's that?)
-    * Overall: ~15 yrs in the industry, mostly in startups, but fallen a couple of times to the corporate hands
-    * Fun time 1: Does Tech Due Diliginces for a couple of VCs
-    * Fun time 2: Contributor to the [Dapr](https://dapr.io) open source project
-    * Fun time 3: this thing
-* Formal: 
-    * B.Sc in Biotechnology & Environmental Science from Tel-Hai College 
-    * M.Sc in Biochemistry from Weizmann Institute of Science
-    * Ph.D studies in Biophysics (I didn't complete) from Weizmann
+* Current: 2 yrs @ [At-Bay](https://at-bay.com) as a Software Architect (...what's that?)
+* Overall: ~15 yrs in the industry, mostly in startups, but fallen a couple of times to the corporate hands
+* Fun time 1: Does Tech Due Diliginces for a couple of VCs
+* Fun time 2: Contributor to the [Dapr](https://dapr.io) open source project
+* Fun time 3: this thing
 
 
 ---
@@ -36,7 +39,7 @@ _class: lead
 
 
 * Software architecture - theory
-* We theory meets reality
+* Where theory meets reality
 * The oh-so-boring SaaS company
 * The *relational database* as the greatest invention in industrial software engineering
 * Where the relational database *fails*
@@ -57,9 +60,9 @@ _class: lead
 ---
 
 # Software Architecture
-## Static Analysis of a System
+## Somebody Needs to Choose... ("System Analysis")
 
-* "Software architecture is about making fundamental structural choices that are <span style="color:red;">costly to change once implemented</span>" (wikipedia, this time getting it right)
+* "Software architecture is about making fundamental structural __choices__ that are <span style="color:red;">costly to change once implemented</span>" (wikipedia, this time getting it right)
 * What's costly to change (over time):
     * Programming Language (changing/adding mostly breaks common tools) --> "element"
     * <span style="color:blue">Data Model</span> (breaks everything if done wrong) --> "property of an element"
@@ -70,30 +73,30 @@ _class: lead
 
 # Software Architecture
 
-## System Design
-* "Fighting" the windmills of **complexity** as software obeys the 2nd law of thermodynamics (complexity never decreases) ![bg right:40% 80%](complexity.webp)
+## Conceptualization & Creation of New Things ("System Design")
+* "Fighting" the windmills of **complexity** as software obeys the 2nd law of thermodynamics (complexity never decreases) ![bg right:30% 90%](complexity.webp)
 
 * But what is complex? ("This part of the codebase doesn’t *feel* right!")
 * When do you surrender to the evil called "management"?
 * The humanity! (You care about people not losing their minds)
 ---
 # Software Architecture
-## Evaluation
+## Reviewing Things ("Evaluation")
 
-Also know as **reviewing things**:
 * High Level Design Review - system
 * Code Reviews - quality
 * Security Reviews - security safety
 * Test Review - code safety
 * Data Modeling Review - correct abstraction/database performance
+* Data Integration Review - none applicative systems
 * DevOps Review - environment/deployment
 * SRE Review - gauges
 
-<span style="color:blue"> Make sure stuff alines with your company *vision* on how software is being made </span>
+<span style="color:blue"> Make sure stuff alines with your company *vision* and *business status* on how software is being made </span>
 
 ---
 # Software Architecture
-## Evolution
+## Redesign Bad Stuff Other People Did ("Evolution")
 * Fun/easy stuff is to do *NEW* things
 * NotSoFun/hardest stuff is to evolve *OLD* things
 * Read about: "evolutionary architecture" 
@@ -107,7 +110,7 @@ Also know as **reviewing things**:
     * There is no ״generic״ best architecture
     * Even the "best" code is eventually __thrown__ to the recycle bean 
     * You are working for a company that in its essence is a machine made to make __profit__
-    * שׁt the broader picture, *individual skills*, are __irrelevant__. Collaboration is key
+    * At the broader perspective, *individual contributions*, are __irrelevant__. Collaboration is key. 
 * None of the above is in contradiction to software development being a beautiful human mental act
 
 ---
@@ -123,15 +126,15 @@ Also know as **reviewing things**:
 
 # The Data Model
 
-## Data Model == Database Tables
+## Data Model = Database Tables
 
-* It is how you model the business entities
+* It is how you model the business (entities)
 
 * **It is the single most important element in the system design of a SaaS**
 
 * It is the only effort worth investing BEFORE writing a single line of code (atypical for a startup to do)
 
-* Still, it is ever evolving with the business needs, but once in use, *it is hard to change*
+* Still, it is ever **evolving** with the business needs, but once in use, *it is hard to change*
 
 * Things that aren't persisted are potentially lost, so the use of in-memory data structures (with all due respect to BigO) is just temporary and the **significant stateful operations are done over a database**
 
@@ -198,17 +201,7 @@ The founding father of the relational model is *Edgar F. Codd*
 ![](postgres_join_results.png)
 
 
----
 
-# Relational Database - Transactions & 2PC
-
-Transactions are special SQL expressions that trigger a special treatment and providing the users with *guarantees* 
-
-A query from my service over the data ALWAYS produces the same result as from another service
-
-The cost is database row/table locking and performance hit (which is nowadays negligible)
-
-This is key for a company that can't accept eventual consistency (regulatory) or that it's business flow is sequential
 
 ---
 
@@ -224,19 +217,21 @@ __Durability__ - once a transaction is committed, it will remain in the system �
 
 ---
 
-# Relational Databases - In Reality
+# Relational Databases - In Practice
 
 
 * You'd rarely find a company using "raw" SQL queries as it is considered error prone
 
 * Most likely a company would use an ORM framework of some sorts
 
-* ORM - Object (to) Relational Mapping
+* ORM - Object (to) Relational Mapping - Libraries that abstract away the SQL expressions and allow to use a more programmatic access to data
+    * Python - Django, SQLAlchemy
+    * Java - Hibernate
 
-* ORM - Libraries that abstract away the SQL expressions and allow to use a more programmatic access to data 
-
-* Python - Django, SQLAlchemy
-* Java - Hibernate
+* Python Django (similar to the left join demonstrated above): 
+    ```python
+    Positions.objects.filter(people__id='KbIW0l..')
+    ```
 
 ---
 
@@ -272,6 +267,19 @@ __Durability__ - once a transaction is committed, it will remain in the system �
 # That's a Questionnaire
 
 ![bg right:60%](graph4.png)
+
+---
+
+# At-Bay
+
+* An insure-tech startup (5 yo)
+* Raised > 200M\$; Evaluated > 1.3B\$
+* x3 people in 2 years, 76 people in tlv
+* working hybrid, people from north, south and center
+* very diverse and heterogeneous skills are around
+* best phase to do interesting things (got the money, customers and scaling the tech)
+* trying to do good
+* looking for back/front/full-end devs,cyber researchers, data/ml engineers
 
 ---
 # Literature
