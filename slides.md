@@ -6,19 +6,12 @@ _class: lead
 
 ---
 
-# Front Matter
 <!-- _paginate: false -->
-a dot com
+
+![bg](slide1.png)
 
 ---
 <!-- paginate: true -->
-
-
-# Outline
-
-* Item 1
-* Item 2
-* Item 3
 
 ---
 
