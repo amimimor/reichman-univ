@@ -198,15 +198,29 @@ The founding father of the relational model is *Edgar F. Codd*
 
 # Relational Databases - __Declarative__ __Language__
 
-![40%](postgres_create_sql.png)
+![bg right:40% 80%](Positions-People-Relations-Opaque.png)
+![w:400px](postgres_create_sql1.png)
+![w:600px](postgres_insert.png)
 
 ---
 
 # Relational Databases - __JOINS__
 
+![bg right:40% 80%](Positions-People-Relations-Opaque.png)
+![](postgres_join.png)
+![](postgres_join_results.png)
+
 ---
 
-# Relational Databases - __A.C.I.D__
+# Relational Databases - Transactions & __A.C.I.D__
+
+ACID = Atomicity, Consistency, Isolation, Durability
+
+
+__Atomicity__ - a guarantee that either all of the transaction succeeds or none of it does. “all or nothing”. 
+__Consistency__ - All data will be valid according to all defined rules, including any constraints, cascades, and triggers that have been applied on the database.
+__Isolation__ - a transaction cannot read data from any other transaction that has not yet completed.
+__Durability__ - once a transaction is committed, it will remain in the system – even if there’s a system crash immediately following the transaction
 
 ---
 # Relational Databases - Example
