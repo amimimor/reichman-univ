@@ -32,6 +32,9 @@ at-bay.com
 * Fun time 2: Contributor to the [Dapr](https://dapr.io) open source project
 * Fun time 3: this thing
 
+---
+
+![](newspaper.jpg)
 
 ---
 
